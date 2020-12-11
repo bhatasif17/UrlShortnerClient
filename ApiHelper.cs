@@ -16,7 +16,7 @@ namespace client.URLShortner
         {
             try
             {
-                var client = new RestClient("https://urlshortner20201211221431.azurewebsites.net/");
+                var client = new RestClient("https://trimurlapi.azurewebsites.net/");
                 var request = new RestRequest($"{resource}")
                     .AddJsonBody(payload);
 
@@ -36,7 +36,7 @@ namespace client.URLShortner
         {
             try
             {
-                var client = new RestClient("https://urlshortner20201211221431.azurewebsites.net/");
+                var client = new RestClient("https://trimurlapi.azurewebsites.net/");
                 var request = new RestRequest($"{id}");
 
                 request.Method = Method.GET;
