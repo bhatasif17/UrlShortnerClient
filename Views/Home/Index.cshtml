@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "URL Shortner";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h5>Please enter your URL below.</h5>
+
+    <br />
+    @using (Html.BeginForm("ShortenURL", "Home", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <input placeholder="https://" required name="url" type="text" />
+        <button type="submit">Submit</button>
+        <br /><br />
+        <label><a target="_blank" href="@ViewBag.url">@ViewBag.url</a></label>
+
+    }
+</div>
